@@ -1,0 +1,61 @@
+.tic-tac-toe {
+  background-color: transparent;
+  border: 7px solid #701212;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  width: max-content;
+}
+
+.square {
+  background-color: #efefef;
+  cursor: pointer;
+  height: 100px;
+  position: relative;
+}
+
+.square.circle::after {
+  border: 6px solid #701212;
+  border-radius: 50%;
+  content: '';
+  height: 60%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.square.square.x::before,
+.square.square.x::after {
+  background-color: #701212;
+  content: '';
+  height: 80%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 5%;
+}
+
+.square.x::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.square.x::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@media (max-width: 375px), (max-height: 510px) {
+  .tic-tac-toe {
+    grid-template-columns: repeat(3, 70px);
+  }
+
+  .square {
+    height: 70px;
+  }
+
+  .square.square.circle::after {
+    border-width: 4px;
+  }
+}

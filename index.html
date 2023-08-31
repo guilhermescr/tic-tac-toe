@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/choose-mode.css" />
+    <link rel="stylesheet" href="assets/css/tic-tac-toe.css" />
+    <title>Tic Tae Toe</title>
+  </head>
+  <body>
+    <button class="reset-game-button">
+      <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <g
+          fill="none"
+          fill-rule="evenodd"
+          stroke="#efefef"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          transform="matrix(0 1 1 0 2.5 2.5)"
+        >
+          <path
+            d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8"
+          />
+
+          <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)" />
+        </g>
+      </svg>
+    </button>
+
+    <section class="choose-mode">
+      <div class="choose-mode__blurry-backdrop"></div>
+
+      <article class="choose-mode__content">
+        <h1>Tic Tac Toe</h1>
+
+        <div class="modes">
+          <div class="modes__mode" id="player-vs-player">
+            <h2>Player VS Player</h2>
+            <img src="assets/img/player-vs-player.png" alt="Player VS Player" />
+          </div>
+
+          <div class="modes__mode" id="player-vs-computer">
+            <h2>Player VS Computer</h2>
+            <img
+              src="assets/img/player-vs-computer.png"
+              alt="Player VS Computer"
+            />
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="tic-tac-toe">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </section>
+
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>
